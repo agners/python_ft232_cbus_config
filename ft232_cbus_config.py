@@ -31,7 +31,7 @@ def main():
     if len(sys.argv) > 1:                                                                                                                   
         serial = sys.argv[1]
 
-    ret = ftdi.usb_open_desc(ftdic, 0x0403, 0x6001, None, None)
+    ret = ftdi.usb_open_desc(ftdic, 0x0403, 0x6001, None, serial)
     if ret < 0:
         print("ftdi.usb_open(): %d" % ret, file=sys.stderr)
         sys.exit(1)
